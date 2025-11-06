@@ -3,7 +3,7 @@ host_key_checking=False
 {{ if eq .profile "personal" -}}
 vault_identity_list=standard@~/.vault-pass.standard, privileged@~/.vault-pass.privileged
 {{ else if eq .profile "work" -}}
-vault_identity_list=standard@~/.vault-pass.standard, privileged@~/.vault-pass.privileged, adp-rke2-ansible@~/.adp-rke2-ansible.standard
+vault_identity_list=standard@~/.sea-ansible-controller.standard, privileged@~/.sea-ansible-controller.privileged, adp-rke2-ansible@~/.adp-rke2-ansible.standard
 
 [galaxy]
 server_list = galaxy, redhat_cdn
