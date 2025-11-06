@@ -2,10 +2,10 @@
         name = Kyle Barstow
         email = {{ .gitEmail }}
         {{ if eq .profile "personal" -}}
-	signingkey = ~/.ssh/id_ed25519_sk_rk_Yubi5CNFC-Orange
-	{{ else if eq .profile "work" -}}
-	signingkey = ~/.ssh/id_ed25519
-	{{ end }}
+        signingkey = ~/.ssh/id_ed25519_sk_rk_Yubi5CNFC-Orange
+        {{ else if eq .profile "work" -}}
+        signingkey = ~/.ssh/id_ed25519
+        {{ end }}
 
 [gpg]
         format = ssh
