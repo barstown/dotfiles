@@ -1,0 +1,24 @@
+[user]
+        name = Kyle Barstow
+        email = {{ .gitEmail }}
+        {{ if eq .profile "personal" -}}
+	signingkey = ~/.ssh/id_ed25519_sk_rk_Yubi5CNFC-Orange
+	{{ else if eq .profile "work" -}}
+	signingkey = ~/.ssh/id_ed25519
+	{{ end }}
+
+[gpg]
+        format = ssh
+
+[commit]
+        gpgsign = true
+
+[credential "https://github.com"]
+        helper = !gh auth git-credential
+
+[credential "https://gist.github.com"]
+        helper = !gh auth git-credential
+
+[credential "https://github.ohio.edu"]
+        helper = !gh auth git-credential
+

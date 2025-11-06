@@ -1,0 +1,5 @@
+{{- if eq .profile "personal" -}}
+{{ include ".chezmoitemplates/ansible/encrypted_private_dot_vault-pass.privileged-personal.age" | decrypt | trim }}
+{{- else if eq .profile "work" -}}
+{{ include ".chezmoitemplates/ansible/encrypted_private_dot_vault-pass.privileged-work.age" | decrypt | trim }}
+{{- end }}

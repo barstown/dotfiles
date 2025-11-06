@@ -1,0 +1,3 @@
+{{- if eq .profile "personal" -}}
+{{ include ".chezmoitemplates/kube/encrypted_private_config.age" | decrypt | trim }}
+{{- end }}

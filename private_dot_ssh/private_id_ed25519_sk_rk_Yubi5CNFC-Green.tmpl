@@ -1,0 +1,3 @@
+{{- if eq .profile "personal" -}}
+{{ include ".chezmoitemplates/ssh/encrypted_private_id_ed25519_sk_rk_Yubi5CNFC-Green.age" | decrypt | trim }}
+{{- end }}

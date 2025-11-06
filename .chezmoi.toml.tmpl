@@ -1,0 +1,17 @@
+# ~/.config/chezmoi/chezmoi.toml
+
+{{- $profile := promptStringOnce . "profile" "Computer profile: personal|work" }}
+{{- $gitEmail := promptStringOnce . "gitEmail" "Git email address" }}
+{{- $bastionHost := promptStringOnce . "bastionHost" "Bastion host FQDN" }}
+
+encryption = "age"
+
+[age]
+    identity = "~/.config/chezmoi/key.txt"
+    recipient = "age1j6vlwgj9v0v5kawf8g8vttkzz9dadh97t44emldl28r9mn4y2ylqdxvyq3"
+
+[data]
+    profile = {{ $profile | quote }}
+    gitEmail = {{ $gitEmail | quote }}
+    bastionHost = {{ $bastionHost | quote }}
+

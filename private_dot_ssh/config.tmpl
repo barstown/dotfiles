@@ -1,0 +1,38 @@
+Host login {{ .bastionHost }}
+  HostName {{ .bastionHost }}
+  ProxyJump none
+  {{- if eq .profile "personal" }}
+  User kyle
+  IdentityFile ~/.ssh/id_ed25519_sk_rk_Yubi5CNFC-Orange
+  IdentityFile ~/.ssh/id_ed25519_sk_rk_Yubi5CNFC-Green
+  {{- else if eq .profile "work" }}
+  User barstown
+  IdentityFile ~/.ssh/id_ed25519
+  {{- end }}
+
+{{ if eq .profile "personal" -}}
+Host udmp
+  HostName 192.168.30.1
+  User root
+  HostKeyAlgorithms ssh-rsa
+  PubkeyAcceptedKeyTypes ssh-rsa
+
+Host *.lab.barstow.xyz
+  ProxyJump login
+  IdentityFile ~/.ssh/id_ed25519_sk_rk_Yubi5CNFC-Orange
+  IdentityFile ~/.ssh/id_ed25519_sk_rk_Yubi5CNFC-Green
+  # ForwardAgent yes
+{{- end }}
+
+{{ if eq .profile "work" -}}
+Host *.ohio.edu
+  ProxyJump login
+  User barstown
+  IdentityFile ~/.ssh/id_ed25519
+  # ForwardAgent yes
+
+Host *.private
+  ProxyJump login
+  User barstown
+  IdentityFile ~/.ssh/id_ed25519
+{{- end }}

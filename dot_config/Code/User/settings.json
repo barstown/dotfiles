@@ -1,0 +1,60 @@
+{
+  "ansible.ansible.path": "~/.local/bin/ansible",
+  "ansible.ansibleNavigator.path": "~/.local/bin/ansible-navigator",
+  "ansible.executionEnvironment.volumeMounts": [],
+  "ansible.lightspeed.enabled": true,
+  "ansible.python.interpreterPath": "/usr/bin/python",
+  "ansible.validation.lint.path": "~/.local/bin/ansible-lint",
+  "editor.semanticTokenColorCustomizations": {},
+  "explorer.confirmDelete": false,
+  "files.trimFinalNewlines": true,
+  "git.autofetch": true,
+  "git.blame.editorDecoration.enabled": true,
+  "git.blame.editorDecoration.template": "${authorName} (${authorDateAgo}) ${subject}",
+  "git.confirmSync": false,
+  "git.enableCommitSigning": true,
+  "kubeseal.executablePath": "kubeseal",
+  "redhat.telemetry.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "telemetry.feedback.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.automationProfile.linux": {},
+  "vale.enableSpellcheck": true,
+  "vale.valeCLI.config": "${workspaceFolder}/.vale.ini",
+  "vscode.env.isTelemetryEnabled": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorCustomizations": null,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.settings.applyToAllProfiles": [],
+  "workbench.startupEditor": "none",
+  "editor.rulers": [
+    80,
+    160
+  ],
+  "projectManager.git.baseFolders": [
+    "~/git"
+  ],
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "docker.extension.enableComposeLanguageServer": false,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "workbench.colorTheme": "Dracula Theme",
+  "editor.dropIntoEditor.preferences": []
+}
