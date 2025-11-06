@@ -1,14 +1,31 @@
 # https://www.chezmoi.io/reference/special-files/chezmoiignore/
 
-# SSH
+# Global ignores
 .ssh/known_hosts
-
-# Oh-My-ZSH
 .oh-my-zsh/cache
 #.oh-my-zsh/custom/themes/powerlevel10k/gitstatus
 #.oh-my-zsh/custom/themes/powerlevel10k/internal
 #.oh-my-zsh/custom/themes/powerlevel10k/powerlevel*k.zsh-theme.zwc
-
-# Chezmoi age
 key.txt.age
+
+# Personal ignores
+{{- if eq .profile "personal" }}
+.ssh/id_ed25519
+.ssh/id_ed25519.pub
+{{- end }}
+
+# Work ignores
+{{- if eq .profile "work" }}
+.kube
+.ssh/id_ed25519_ansible-sa
+.ssh/id_ed25519_ansible-sa.pub
+.ssh/id_ed25519_ansible-sa.pub
+.ssh/id_ed25519_sk_rk_Yubi5CNFC-Green
+.ssh/id_ed25519_sk_rk_Yubi5CNFC-Green.pub
+.ssh/id_ed25519_sk_rk_Yubi5CNFC-Orange
+.ssh/id_ed25519_sk_rk_Yubi5CNFC-Orange.pub
+.talos
+.vault-pass.privileged
+.vault-pass.standard
+{{- end }}
 

@@ -1,3 +1,0 @@
-{{- if eq .profile "personal" -}}
-{{ include ".chezmoitemplates/ansible/encrypted_private_dot_vault-pass.standard-personal.age" | decrypt | trim }}
-{{- end }}
