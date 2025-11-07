@@ -1,5 +1,11 @@
 default-remote: local
 remotes:
+  IncusOS:
+    addr: https://10.0.10.64:8443
+    auth_type: tls
+    project: default
+    protocol: incus
+    public: false
   images:
     addr: https://images.linuxcontainers.org
     protocol: simplestreams
