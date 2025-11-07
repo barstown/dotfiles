@@ -16,6 +16,7 @@ key.txt.age
 
 # Work ignores
 {{- if eq .profile "work" }}
+.config/incus
 .kube
 .ssh/id_ed25519_ansible-sa
 .ssh/id_ed25519_ansible-sa.pub
