@@ -1,7 +1,7 @@
 [defaults]
 host_key_checking=False
 {{ if eq .profile "personal" -}}
-vault_identity_list=standard@~/.vault-pass.standard, privileged@~/.vault-pass.privileged
+vault_identity_list=standard@~/.vault-pass.standard, privileged@~/.vault-pass.privileged, awx-config@~/.ansible/.vault-pass_ansible-controller-config
 {{ else if eq .profile "work" -}}
 vault_identity_list=standard@~/.sea-ansible-controller.standard, privileged@~/.sea-ansible-controller.privileged, adp-rke2-ansible@~/.adp-rke2-ansible.standard
 
@@ -16,4 +16,3 @@ token=X
 [galaxy_server.galaxy]
 url=https://galaxy.ansible.com/
 {{- end }}
-
