@@ -37,3 +37,12 @@ repositories:
   password: ""
   url: https://releases.rancher.com/server-charts/latest
   username: ""
+- caFile: ""
+  certFile: ""
+  insecure_skip_tls_verify: false
+  keyFile: ""
+  name: community-charts
+  pass_credentials_all: false
+  password: ""
+  url: https://community-charts.github.io/helm-charts
+  username: ""
