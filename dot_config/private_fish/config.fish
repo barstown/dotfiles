@@ -15,5 +15,8 @@ if status is-interactive
     fish_default_key_bindings # emacs-style bindings
 end
 
+# Init mise
+mise activate fish | source
+
 # Initialize Starship prompt (must be at the end)
 starship init fish | source
